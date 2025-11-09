@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { BarbershopService, Barbershop } from "../generated/prisma/client";
+import { BarbershopService, Barbershop } from "@/generated/prisma/client";
 import { Button } from "./ui/button";
 import {
   Sheet,
