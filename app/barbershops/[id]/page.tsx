@@ -1,12 +1,12 @@
 import { prisma } from "@/lib/prisma";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
 import { Button } from "@/app/_components/ui/button";
 import { Separator } from "@/app/_components/ui/separator";
 import { ServiceItem } from "@/app/_components/service-item";
 import { PhoneItem } from "@/app/_components/phone-item";
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 
 const BarbershopPage = async (props: PageProps<"/barbershops/[id]">) => {
   const { id } = await props.params;
