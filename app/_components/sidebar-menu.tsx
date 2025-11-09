@@ -132,18 +132,20 @@ const SidebarMenu = () => {
       <Separator />
 
       {/* Logout Button */}
-      <SheetClose asChild>
-        <Button
-          onClick={handleLogout}
-          variant="ghost"
-          className="w-full justify-start gap-3 rounded-full px-5 py-3"
-        >
-          <LogOutIcon className="size-4" />
-          <span className="text-muted-foreground text-sm font-medium">
-            Sair da conta
-          </span>
-        </Button>
-      </SheetClose>
+      {session?.user && (
+        <SheetClose asChild>
+          <Button
+            onClick={handleLogout}
+            variant="ghost"
+            className="w-full justify-start gap-3 rounded-full px-5 py-3"
+          >
+            <LogOutIcon className="size-4" />
+            <span className="text-muted-foreground text-sm font-medium">
+              Sair da conta
+            </span>
+          </Button>
+        </SheetClose>
+      )}
     </div>
   );
 };
